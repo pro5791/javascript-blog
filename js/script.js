@@ -62,6 +62,8 @@ function generateTitleLinks(){
     //console.log('optTitleListSelector():', optTitleListSelector);
 
     /* for each article */
+    let html = '';
+
     const articles = document.querySelectorAll(optArticleSelector);
     for(let article of articles) {
 
@@ -84,8 +86,12 @@ function generateTitleLinks(){
 
         //console.log('linkHTML:', linkHTML);
 
-        /* insert link into titleList */
+        /* insert link into html variable */
+        html = html + linkHTML;
+
+        //console.log('html:', html);
     }
+    titleList.innerHTML = html;
 }
 
 generateTitleLinks();
