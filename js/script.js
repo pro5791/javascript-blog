@@ -90,40 +90,52 @@ function generateTitleLinks(){
         //console.log('html:', html);
     }
     titleList.innerHTML = html;
+
+    const links = document.querySelectorAll('.titles a');
+    for(let link of links) {
+        link.addEventListener('click', titleClickHandler);
+    }
+
 }
 
 generateTitleLinks();
 
 function generateTags(){
     /* find all articles */
+    const articles = document.querySelectorAll(optArticleSelector);
 
     /* START LOOP: for every article: */
+    for(let article of articles) {
 
-    /* find tags wrapper */
+        //console.log('optArticleSelector():', optArticleSelector);
 
-    /* make html variable with empty string */
+        /* find tags wrapper */
+        const tagList = document.querySelector(optArticleTagsSelector);
+        tagList.innerHTML = '';
 
-    /* get tags from data-tags attribute */
+        console.log('optArticleTagsSelector():', optArticleTagsSelector);
 
-    /* split tags into array */
+        /* make html variable with empty string */
 
-    /* START LOOP: for each tag */
+        /* get tags from data-tags attribute */
 
-    /* generate HTML of the link */
+        /* split tags into array */
 
-    /* add generated code to html variable */
+        /* START LOOP: for each tag */
 
-    /* END LOOP: for each tag */
+        /* generate HTML of the link */
 
-    /* insert HTML of all the links into the tags wrapper */
+        /* add generated code to html variable */
 
-    /* END LOOP: for every article: */
+        /* END LOOP: for each tag */
+
+        /* insert HTML of all the links into the tags wrapper */
+
+        /* END LOOP: for every article: */
+    }
 }
 
 generateTags();
 
-const links = document.querySelectorAll('.titles a');
-for(let link of links) {
-    link.addEventListener('click', titleClickHandler);
-}
+
 
