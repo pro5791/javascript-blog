@@ -92,8 +92,13 @@ function generateTitleLinks(){
     titleList.innerHTML = html;
 
     const links = document.querySelectorAll('.titles a');
+
+    //console.log('links:', links);
+
     for(let link of links) {
         link.addEventListener('click', titleClickHandler);
+
+        //console.log('link:', link);
     }
 }
 
@@ -140,13 +145,15 @@ function generateTags(){
             /* [DONE] add generated code to html variable */
             html = html + linkHTML;
 
-            console.log('html:', html);
+            //console.log('html:', html);
 
         /* END LOOP: for each tag */
         }
 
         /* insert HTML of all the links into the tags wrapper */
         tagList.innerHTML = html;
+
+        //console.log('html:', html);
 
     /* END LOOP: for every article: */
     }
