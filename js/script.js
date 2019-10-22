@@ -146,7 +146,7 @@ function generateTags(){
         }
 
         /* insert HTML of all the links into the tags wrapper */
-
+        tagList.innerHTML = html;
 
     /* END LOOP: for every article: */
     }
