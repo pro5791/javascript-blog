@@ -8,7 +8,7 @@
 const titleClickHandler = function(event) {
     event.preventDefault();
 
-    console.log('Link was clicked!');
+    //console.log('Link was clicked!');
     //console.log(event);
 
     /* [DONE] remove class 'active' from all article links  */
@@ -95,29 +95,30 @@ function generateTitleLinks(){
     for(let link of links) {
         link.addEventListener('click', titleClickHandler);
     }
-
 }
 
 generateTitleLinks();
 
 function generateTags(){
-    /* find all articles */
+    /* [DONE] find all articles */
     const articles = document.querySelectorAll(optArticleSelector);
 
-    /* START LOOP: for every article: */
+    /* [DONE] START LOOP: for every article: */
     for(let article of articles) {
 
         //console.log('optArticleSelector():', optArticleSelector);
 
-        /* find tags wrapper */
-        const tagList = document.querySelector(optArticleTagsSelector);
+        /* [DONE] find tags wrapper */
+        const tagList = article.querySelector(optArticleTagsSelector);
         tagList.innerHTML = '';
 
         console.log('optArticleTagsSelector():', optArticleTagsSelector);
 
-        /* make html variable with empty string */
+        /* [DONE] make html variable with empty string */
+        let html = '';
 
         /* get tags from data-tags attribute */
+
 
         /* split tags into array */
 
