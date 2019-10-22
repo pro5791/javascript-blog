@@ -112,13 +112,15 @@ function generateTags(){
         const tagList = article.querySelector(optArticleTagsSelector);
         tagList.innerHTML = '';
 
-        console.log('optArticleTagsSelector():', optArticleTagsSelector);
+        //console.log('optArticleTagsSelector():', optArticleTagsSelector);
 
         /* [DONE] make html variable with empty string */
         let html = '';
 
         /* get tags from data-tags attribute */
+        const articleTags = article.getAttribute("data-tags");
 
+        //console.log('articleTags:', articleTags);
 
         /* split tags into array */
 
