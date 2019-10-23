@@ -158,7 +158,6 @@ function generateTags(){
     /* END LOOP: for every article: */
     }
 }
-
 generateTags();
 
 
