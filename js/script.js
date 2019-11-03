@@ -258,9 +258,9 @@ function authorClickHandler(event){
     const href = clickedElement.getAttribute("href");
     //console.log('href:', href);
 
-    /* [DONE] make a new constant "tag" and extract tag from the "href" constant */
-    const tag = href.replace('#tag-', '');
-    //console.log('tag:', tag);
+    /* [DONE] make a new constant "author" and extract author from the "href" constant */
+    const author = href.replace('#author-', '');
+    //console.log('author:', author);
 
     /* [DONE] find all tag links with class active */
     const activeTags = document.querySelectorAll('a.active[href^="#tag-"]');
