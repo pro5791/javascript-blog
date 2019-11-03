@@ -245,9 +245,9 @@ function generateAuthors(){
 generateAuthors();
 
 function authorClickHandler(event){
-    //console.log('tagClickHandler:', tagClickHandler);
+    //console.log('authorClickHandler:', authorClickHandler);
 
-    /* [DONE]  prevent default action for this event */
+    /* [DONE] prevent default action for this event */
     event.preventDefault();
 
     /* [DONE] make new constant named "clickedElement" and give it the value of "this" */
