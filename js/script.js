@@ -206,53 +206,42 @@ function addClickListenersToTags(){
 }
 addClickListenersToTags();
 
-
 function generateAuthors(){
     /* [DONE] find all authors */
     const authorArticles = document.querySelectorAll(optArticleSelector);
     //console.log('authorArticles:', authorArticles);
 
     /* [DONE] START LOOP: for every article: */
-    for(let article of articles) {
-        //console.log('article:', article);
+    for(let authorArticle of authorArticles) {
+        //console.log('authorArticle',authorArticle);
 
         /* [DONE] find tags wrapper */
-        const titleList = article.querySelector(optArticleTagsSelector);
-        //console.log('titleList:', titleList);
+        const authorList = authorArticle.querySelector(optArticleAuthorSelector);
+        //console.log('authorList:', authorList);
 
         /* [DONE] make html variable with empty string */
         let html = '';
         //console.log('html:', html);
 
-        /* [DONE] get tags from data-tags attribute */
-        const articleTags = article.getAttribute("data-tags");
-        //console.log('articleTags:', articleTags);
+        /* [DONE] get authors from data-authors attribute */
+        const articleAuthor = authorArticle.getAttribute('data-authors');
+        //console.log('articleAuthor:', articleAuthor);
 
-        /* [DONE] split tags into array */
-        const articleTagsArray = articleTags.split(' ');
-        //console.log('articleTagsArray:', articleTagsArray);
+        /* [DONE] generate HTML of the link */
+        const linkHTML = '<li><a href="#author-' + articleAuthor + '">' + articleAuthor + '</a></li>' + ' ';
+        //console.log('linkHTML:', linkHTML);
 
-        /* [DONE] START LOOP: for each tag */
-        for(let tag of articleTagsArray){
-            //console.log('tag:', tag);
+        /* [DONE] add generated code to html variable */
+        html = html + linkHTML;
+        //console.log('html:', html);
 
-            /* √generate HTML of the link */
-            const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li> ';
-            //console.log('linkHTML:', linkHTML);
-
-            /* [DONE] add generated code to html variable */
-            html = html + linkHTML;
-            //console.log('html:', html);
-
-            /* [DONE] END LOOP: for each tag */
-        }
         /* [DONE] insert HTML of all the links into the tags wrapper */
-        titleList.innerHTML = html;
+        authorList.innerHTML = html;
 
         /* [DONE] END LOOP: for every article: */
     }
 }
-generateTags();
+generateAuthors();
 
 function tagClickHandler(event){
     //console.log('tagClickHandler:', tagClickHandler);
