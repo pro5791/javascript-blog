@@ -191,12 +191,14 @@ function addClickListenersToTags(){
     const tagLinks = document.querySelectorAll(optArticleTagSelector + ',' + optTagsListSelector);
     //console.log('tagLinks:', tagLinks)
 
-    /* START LOOP: for each link */
+    /* [DONE] START LOOP: for each link */
+    for (let tag of tagLinks) {
 
-    /* add tagClickHandler as event listener for that link */
+        /* [DONE] add tagClickHandler as event listener for that link */
+        tag.addEventListener('click', tagClickHandler);
 
-    /* END LOOP: for each link */
+        /* [DONE] END LOOP: for each link */
+    }
 }
-
 addClickListenersToTags();
 
