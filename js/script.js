@@ -206,10 +206,11 @@ function addClickListenersToTags(){
 }
 addClickListenersToTags();
 
-function generateTags(){
-    /* [DONE] find all articles */
-    const articles = document.querySelectorAll(optArticleSelector);
-    //console.log('articles:', articles);
+
+function generateAuthors(){
+    /* [DONE] find all authors */
+    const authorArticles = document.querySelectorAll(optArticleSelector);
+    //console.log('authorArticles:', authorArticles);
 
     /* [DONE] START LOOP: for every article: */
     for(let article of articles) {
