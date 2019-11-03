@@ -173,11 +173,15 @@ function tagClickHandler(event){
     const tagLinks = document.querySelectorAll('a[href^="#tag-' + tag + '"]');
     //console.log('tagLinks:', tagLinks);
 
-    /* START LOOP: for each found tag link */
+    /* [DONE] START LOOP: for each found tag link */
+    for (let tagLink of tagLinks) {
+        //console.log('tagLink:', tagLink);
 
-    /* add class active */
+        /* [DONE] add class active */
+        tagLink.classList.add('active');
 
-    /* END LOOP: for each found tag link */
+        /* [DONE] END LOOP: for each found tag link */
+    }
 
     /* execute function "generateTitleLinks" with article selector as argument */
 }
