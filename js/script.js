@@ -266,31 +266,31 @@ function authorClickHandler(event){
     const activeAuthors = document.querySelectorAll('a.active[href^="#author-"]');
     //console.log('activeAuthors:', activeAuthors);
 
-    /* [DONE] START LOOP: for each active tag link */
-    for (let activeTag of activeTags) {
+    /* [DONE] START LOOP: for each active author link */
+    for (let activeAuthor of activeAuthors) {
 
         /* [DONE] remove class active */
-        activeTag.classList.remove('active');
-        //console.log('activeTag:', activeTag);
+        activeAuthor.classList.remove('active');
+        //console.log('activeAuthor:', activeAuthor);
 
-        /* END LOOP: for each active tag link */
+        /* [DONE] END LOOP: for each active author link */
     }
 
-    /* [DONE] find all tag links with "href" attribute equal to the "href" constant */
-    const tagLinks = document.querySelectorAll('a[href^="#tag-' + tag + '"]');
-    //console.log('tagLinks:', tagLinks);
+    /* [DONE] find all authors links with "href" attribute equal to the "href" constant */
+    const authorLinks = document.querySelectorAll('a[href^="#author-' + author + '"]');
+    //console.log('authorLinks:', authorLinks);
 
-    /* [DONE] START LOOP: for each found tag link */
-    for (let tagLink of tagLinks) {
-        //console.log('tagLink:', tagLink);
+    /* [DONE] START LOOP: for each found author link */
+    for (let authorLink of authorLinks) {
+        console.log('authorLink:', authorLink);
 
         /* [DONE] add class active */
-        tagLink.classList.add('active');
+        authorLink.classList.add('active');
 
-        /* [DONE] END LOOP: for each found tag link */
+        /* [DONE] END LOOP: for each found author link */
     }
     /* [DONE] execute function "generateTitleLinks" with article selector as argument */
-    generateTitleLinks('[data-tags~="' + tag + '"]');
+    generateTitleLinks('[data-authors~="' + author + '"]');
 }
 
 function addClickListenersToTags(){
