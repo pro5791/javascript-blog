@@ -138,9 +138,10 @@ function generateTags(){
 generateTags();
 
 function tagClickHandler(event){
-    console.log('tagClickHandler:', tagClickHandler);
+    //console.log('tagClickHandler:', tagClickHandler);
 
-    /* prevent default action for this event */
+    /* [DONE]  prevent default action for this event */
+    event.preventDefault();
 
     /* make new constant named "clickedElement" and give it the value of "this" */
 
