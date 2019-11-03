@@ -290,7 +290,7 @@ function authorClickHandler(event){
         /* [DONE] END LOOP: for each found author link */
     }
     /* [DONE] execute function "generateTitleLinks" with article selector as argument */
-    generateTitleLinks('[data-authors~="' + author + '"]');
+    generateTitleLinks('[data-authors="' + author + '"]');
 }
 
 function addClickListenersToTags(){
