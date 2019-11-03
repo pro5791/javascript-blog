@@ -46,11 +46,11 @@ const optArticleSelector = '.post',
       optArticleTagsSelector = '.post-tags .list',
       optArticleAuthorSelector = '.post-author',
       optArticleTagSelector = '.post-tags a',
-
-      optTitleSelector = '.post-title',
+      optArticleAuthorSelectorLink = '.post-author a',
       optTagsListSelector = '.list.tags a',
-
-      optTitleListSelector = '.titles';
+      optTitleSelector = '.post-title',
+      optTitleListSelector = '.titles',
+      optAuthorsListSelector = '.list.authors a';
 
 function generateTitleLinks(customSelector = ''){
 
@@ -293,19 +293,19 @@ function authorClickHandler(event){
     generateTitleLinks('[data-authors="' + author + '"]');
 }
 
-function addClickListenersToTags(){
-    /* [DONE] find all links to tags */
-    const tagLinks = document.querySelectorAll(optArticleTagSelector + ',' + optTagsListSelector);
-    //console.log('tagLinks:', tagLinks)
+function addClickListenersToAuthors() {
+    /* [DONE] find all links to Authors */
+    const linksToAuthors = document.querySelectorAll(optArticleAuthorSelectorLink + ',' + optAuthorsListSelector);
+    console.log('linksToAuthors:', linksToAuthors)
 
     /* [DONE] START LOOP: for each link */
-    for (let tag of tagLinks) {
+    for (let author of linksToAuthors) {
 
-        /* [DONE] add tagClickHandler as event listener for that link */
-        tag.addEventListener('click', tagClickHandler);
+        /* [DONE] add authorClickHandler as event listener for that link */
+        author.addEventListener('click', authorClickHandler);
+        console.log('author:', author)
 
-        /* [DONE] END LOOP: for each link */
+        /* END LOOP: for each link */
     }
 }
-addClickListenersToTags();
-
+addClickListenersToAuthors();
