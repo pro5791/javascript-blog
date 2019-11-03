@@ -44,13 +44,8 @@ const titleClickHandler = function(event) {
 
 const optArticleSelector = '.post',
       optArticleTagsSelector = '.post-tags .list',
-      optArticleTagSelector = '.post-tags a',
-      optArticleAuthorSelector = '.post-author',
-      optArticleAuthorSelectorLink = '.post-author a',
       optTitleSelector = '.post-title',
-      optTitleListSelector = '.titles',
-      optTagsListSelector = '.list.tags a',
-      optAuthorsListSelector = '.list.authors a';
+      optTitleListSelector = '.titles';
 
 function generateTitleLinks(customSelector = ''){
 
