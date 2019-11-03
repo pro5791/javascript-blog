@@ -167,8 +167,11 @@ function tagClickHandler(event){
         //console.log('activeTag:', activeTag);
 
     /* END LOOP: for each active tag link */
+    }
 
-    /* find all tag links with "href" attribute equal to the "href" constant */
+    /* [DONE] find all tag links with "href" attribute equal to the "href" constant */
+    const tagLinks = document.querySelectorAll('a[href^="#tag-' + tag + '"]');
+    //console.log('tagLinks:', tagLinks);
 
     /* START LOOP: for each found tag link */
 
