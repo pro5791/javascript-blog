@@ -244,7 +244,7 @@ function generateAuthors(){
 }
 generateAuthors();
 
-function tagClickHandler(event){
+function authorClickHandler(event){
     //console.log('tagClickHandler:', tagClickHandler);
 
     /* [DONE]  prevent default action for this event */
