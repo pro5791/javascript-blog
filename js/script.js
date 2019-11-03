@@ -162,7 +162,9 @@ function tagClickHandler(event){
     /* [DONE] START LOOP: for each active tag link */
     for (let activeTag of activeTags) {
 
-    /* remove class active */
+        /* [DONE] remove class active */
+        activeTag.classList.remove('active');
+        //console.log('activeTag:', activeTag);
 
     /* END LOOP: for each active tag link */
 
