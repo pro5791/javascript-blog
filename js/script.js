@@ -101,7 +101,21 @@ function calculateTagsParams(tags) {
     max: 0,
     min: 999999
   }
+  for(let tag in tags){
+    console.log(tag + ' is used ' + tags[tag] + ' times');
+
+    if (tags[tag] > params.max) {
+      params.max = tags[tag];
+      console.log('params.max:', params.max);
+    }
+    if (tags[tag] < params.min) {
+      params.min = tags[tag];
+      console.log('params.min:', params.min);
+    }
+  }
+  return params;
 }
+
 
 function generateTags(){
   /* [NEW] create a new variable allTags with an empty array */
@@ -164,7 +178,7 @@ function generateTags(){
   //console.log('tagList:', tagList);
 
   const tagsParams = calculateTagsParams(allTags);
-  console.log ('tagsParams:', tagsParams);
+  //console.log ('tagsParams:', tagsParams);
 
   /* [NEW] create variable for all links HTML code */
   let allTagsHTML ='';
@@ -174,7 +188,7 @@ function generateTags(){
     /* [NEW] Generate code of a link and it to allTagsHTML */
     allTagsHTML += '<li class="tag-size"><a href="#tag-' + tag + '">' + tag + '</a>(' + allTags[tag] + ')</li>';
     //allTagsHTML += tag + ' (' + allTags[tag] + ') ';
-    console.log('allTagsHTML:', allTagsHTML);
+    //console.log('allTagsHTML:', allTagsHTML);
 
     /* [NEW] STOP LOOP: for each in allTags: */
   }
