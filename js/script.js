@@ -95,6 +95,14 @@ function generateTitleLinks(customSelector = ''){
 }
 generateTitleLinks();
 
+  /* [NEW] Create new variable - params with max and min values */
+function calculateTagsParams(tags) {
+  const params = {
+    max: 0,
+    min: 999999
+  }
+}
+
 function generateTags(){
   /* [NEW] create a new variable allTags with an empty array */
   //let allTags = [];
@@ -154,6 +162,9 @@ function generateTags(){
   /* [NEW] find list of tags in right column */
   const tagList = document.querySelector('.tags');
   //console.log('tagList:', tagList);
+
+  const tagsParams = calculateTagsParams(allTags);
+  console.log ('tagsParams:', tagsParams);
 
   /* [NEW] create variable for all links HTML code */
   let allTagsHTML ='';
