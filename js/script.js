@@ -98,7 +98,6 @@ generateTitleLinks();
 function generateTags(){
   /* [NEW] create a new variable allTags with an empty array */
   let allTags = [];
-  //console.log('articles:', articles);
 
   /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
@@ -135,6 +134,13 @@ function generateTags(){
       /* [DONE] add generated code to html variable */
       html = html + linkHTML;
       //console.log('html:', html);
+
+      /* [NEW] check if this link is NOT already in allTags */
+      if(allTags.indexOf(linkHTML) == -1){
+
+        /* [NEW] add generated code to allTags array */
+        allTags.push(linkHTML);
+      }
 
       /* [DONE] END LOOP: for each tag */
     }
