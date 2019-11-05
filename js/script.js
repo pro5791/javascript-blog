@@ -47,7 +47,8 @@ const optArticleSelector = '.post',
   optArticleAuthorSelector = '.post-author',
   optArticleTagSelector = '.post-tags a',
   optArticleAuthorSelectorLink = '.post-author a',
-  optTagsListSelector = '.list.tags a',
+  //optTagsListSelector = '.list.tags a',
+  optTagsListSelector = '.tags.list',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
   optAuthorsListSelector = '.list.authors a';
@@ -95,6 +96,10 @@ function generateTitleLinks(customSelector = ''){
 generateTitleLinks();
 
 function generateTags(){
+  /* [NEW] create a new variable allTags with an empty array */
+  let allTags = [];
+  //console.log('articles:', articles);
+
   /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
   //console.log('articles:', articles);
