@@ -160,13 +160,13 @@ function generateTags(){
   let allTagsHTML ='';
 
   /* [NEW] START LOOP: for each in allTags: */
-  for(let tag in allTags){
-
+  for(let tag in allTags) {
+    /* [NEW] Generate code of a link and it to allTagsHTML */
+    allTagsHTML += tag + ' (' + allTags[tag] + ') ';
   }
   /* [NEW] add html from allTags to tagList */
   //tagList.innerHTML = allTags.join(' ');
   console.log('allTags:', allTags);
-
 }
 generateTags();
 
