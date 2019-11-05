@@ -53,7 +53,6 @@ const optArticleSelector = '.post',
   optAuthorsListSelector = '.list.authors a';
 
 function generateTitleLinks(customSelector = ''){
-
   /* [DONE]  remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
@@ -282,7 +281,7 @@ function authorClickHandler(event){
 
   /* [DONE] START LOOP: for each found author link */
   for (let authorLink of authorLinks) {
-    console.log('authorLink:', authorLink);
+    //console.log('authorLink:', authorLink);
 
     /* [DONE] add class active */
     authorLink.classList.add('active');
@@ -296,16 +295,17 @@ function authorClickHandler(event){
 function addClickListenersToAuthors() {
   /* [DONE] find all links to Authors */
   const linksToAuthors = document.querySelectorAll(optArticleAuthorSelectorLink + ',' + optAuthorsListSelector);
-  console.log('linksToAuthors:', linksToAuthors)
+  //console.log('linksToAuthors:', linksToAuthors)
 
   /* [DONE] START LOOP: for each link */
   for (let author of linksToAuthors) {
 
     /* [DONE] add authorClickHandler as event listener for that link */
     author.addEventListener('click', authorClickHandler);
-    console.log('author:', author)
+    //console.log('author:', author)
 
   /* END LOOP: for each link */
   }
 }
 addClickListenersToAuthors();
+
