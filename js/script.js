@@ -144,7 +144,6 @@ function generateTags(){
       } else {
         allTags[tag]++;
       }
-
       /* [DONE] END LOOP: for each tag */
     }
     /* [DONE] insert HTML of all the links into the tags wrapper */
@@ -163,9 +162,10 @@ function generateTags(){
   for(let tag in allTags) {
     /* [NEW] Generate code of a link and it to allTagsHTML */
     allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+  /* [NEW] STOP LOOP: for each in allTags: */
   }
   /* [NEW] add html from allTags to tagList */
-  //tagList.innerHTML = allTags.join(' ');
+  tagList.innerHTML = allTagsHTML;
   console.log('allTags:', allTags);
 }
 generateTags();
