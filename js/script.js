@@ -138,10 +138,11 @@ function generateTags(){
 
       /* [NEW] check if this link is NOT already in allTags */
       if(!allTags.hasOwnProperty(tag)){
-
         /* [NEW] add generated code to allTags array */
         allTags[tag] = 1;
         //console.log('allTags:', allTags);
+      } else {
+        allTags[tag]++;
       }
 
       /* [DONE] END LOOP: for each tag */
@@ -153,10 +154,17 @@ function generateTags(){
   }
   /* [NEW] find list of tags in right column */
   const tagList = document.querySelector('.tags');
-  console.log('tagList:', tagList);
+  //console.log('tagList:', tagList);
+
+  /* [NEW] create variable for all links HTML code */
+  let allTagsHTML ='';
+
+  /* [NEW]
 
   /* [NEW] add html from allTags to tagList */
-  tagList.innerHTML = allTags.join(' ');
+  //tagList.innerHTML = allTags.join(' ');
+  console.log('allTags:', allTags);
+
 }
 generateTags();
 
