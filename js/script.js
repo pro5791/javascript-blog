@@ -140,6 +140,8 @@ function generateTags(){
 
         /* [NEW] add generated code to allTags array */
         allTags.push(linkHTML);
+        console.log('allTags:', allTags);
+
       }
 
       /* [DONE] END LOOP: for each tag */
