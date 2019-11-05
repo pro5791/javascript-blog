@@ -161,12 +161,15 @@ function generateTags(){
   /* [NEW] START LOOP: for each in allTags: */
   for(let tag in allTags) {
     /* [NEW] Generate code of a link and it to allTagsHTML */
-    allTagsHTML += tag + ' (' + allTags[tag] + ') ';
-  /* [NEW] STOP LOOP: for each in allTags: */
+    allTagsHTML += '<li class="tag-size"><a href="#tag-' + tag + '">' + tag + '</a>(' + allTags[tag] + ')</li>';
+    //allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+    console.log('allTagsHTML:', allTagsHTML);
+
+    /* [NEW] STOP LOOP: for each in allTags: */
   }
   /* [NEW] add html from allTags to tagList */
   tagList.innerHTML = allTagsHTML;
-  console.log('allTags:', allTags);
+  //console.log('allTags:', allTags);
 }
 generateTags();
 
