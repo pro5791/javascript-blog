@@ -159,8 +159,10 @@ function generateTags(){
   /* [NEW] create variable for all links HTML code */
   let allTagsHTML ='';
 
-  /* [NEW]
+  /* [NEW] START LOOP: for each in allTags: */
+  for(let tag in allTags){
 
+  }
   /* [NEW] add html from allTags to tagList */
   //tagList.innerHTML = allTags.join(' ');
   console.log('allTags:', allTags);
