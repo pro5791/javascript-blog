@@ -140,7 +140,7 @@ function generateTags(){
 
         /* [NEW] add generated code to allTags array */
         allTags.push(linkHTML);
-        console.log('allTags:', allTags);
+        //console.log('allTags:', allTags);
       }
 
       /* [DONE] END LOOP: for each tag */
@@ -152,6 +152,7 @@ function generateTags(){
   }
   /* [NEW] find list of tags in right column */
   const tagList = document.querySelector('.tags');
+  console.log('tagList:', tagList);
 
   /* [NEW] add html from allTags to tagList */
   tagList.innerHTML = allTags.join(' ');
