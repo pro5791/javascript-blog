@@ -54,7 +54,7 @@ function generateTitleLinks(customSelector = ''){
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
   //console.log('optTitleListSelector():', optTitleListSelector);
-  ;
+
   /* [DONE]  for each article */
   let html = '';
 
@@ -279,7 +279,7 @@ function calculateAuthorsParams(authors) {
     min: 999999
   }
   for(let author in authors){
-    //console.log(author + ' is used ' + authors[author] + ' times');
+    console.log(author + ' is used ' + authors[author] + ' times');
 
     if (authors[author] > params.max) {
       params.max = authors[author];
@@ -364,8 +364,8 @@ function generateAuthors(){
   /* [NEW] START LOOP: for each in allAuthors: */
   for (let articleAuthor in allAuthors) {
     /* [NEW] Generate code of a link and it to allAuthorsHTML */
-    const authorLinkHTML = '<li><a class ="tag-size-' + calculateAuthorClass(allAuthors[articleAuthor], authorParams) + '" href="#author-' + articleAuthor + '">' + articleAuthor + '</a>(' + calculateAuthorClass(allAuthors[articleAuthor], authorParams) + ')</li>' + ' ';
-    //console.log('authorLinkHTML:', authorLinkHTML);
+    const authorLinkHTML = '<li><a class ="tag-size-' + calculateAuthorClass(allAuthors[articleAuthor], authorParams) + '" href="#author-' + articleAuthor + '">' + articleAuthor + '</a>(' + allAuthors[articleAuthor] + ')</li>' + ' ';
+    //console.log('allAuthors[articleAuthor]:', allAuthors[articleAuthor], authorParams);
 
     allAuthorsHTML += authorLinkHTML;
     //console.log('allAuthorsHTML:', allAuthorsHTML);
