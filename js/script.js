@@ -404,7 +404,7 @@ function generateAuthors(){
   /* [NEW] add html from allTags to tagList */
   //authorList.innerHTML = allAuthorsHTML;
   authorCloudList.innerHTML = templates.authorCloudLink(allAuthorsData);
-  console.log('allAuthorsData:', allAuthorsData);
+  //console.log('allAuthorsData:', allAuthorsData);
 }
 generateAuthors();
 
